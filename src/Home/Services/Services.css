@@ -1,0 +1,20 @@
+/* ServicesSection.css */
+
+.services-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+  }
+
+  .ServicesSection{
+    background-color: #f9f9f9; 
+    margin-top: 5px;
+  }
+
+  .services-head h2{
+    font-size: 2rem;
+    color: #c70b8a;
+    text-align: center;
+  }
