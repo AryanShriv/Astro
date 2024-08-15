@@ -5,9 +5,14 @@ const QueryForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    dob: '',
+    tob: '',
+    ampm: 'AM', // New state for AM/PM
+    place: '',
+    gen: '',
     question: ''
   });
-  const [isSubmitted, setIsSubmitted] = useState(false); // State to control the pop-up
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -26,13 +31,17 @@ const QueryForm = () => {
     setFormData({
       name: '',
       email: '',
+      dob: '',
+      tob: '',
+      place: '',
+      gen: '',
       question: ''
     });
   };
 
   return (
     <section className="query-section">
-      <h2 className="query-heading">Have a Question?</h2>
+      <h2 className="query-heading">Contact Us</h2>
       <form onSubmit={handleSubmit} className="query-form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -45,17 +54,57 @@ const QueryForm = () => {
             required
           />
         </div>
+
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="dob">Date Of Birth:</label>
           <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
+            type="date"
+            id="dob"
+            name="dob"
+            value={formData.dob}
             onChange={handleChange}
             required
           />
         </div>
+
+        <div className="form-group">
+          <label htmlFor="tob">Time Of Birth:</label>
+          <div className="time-of-birth">
+            <input
+              type="time"
+              id="tob"
+              name="tob"
+              value={formData.tob}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="place">Place Of Birth (With State):</label>
+          <input
+            type="text"
+            id="place"
+            name="place"
+            value={formData.place}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="gen">Gender:</label>
+          <input
+            type="text"
+            id="gen"
+            name="gen"
+            value={formData.gen}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
         <div className="form-group">
           <label htmlFor="question">Your Question:</label>
           <textarea
@@ -66,6 +115,19 @@ const QueryForm = () => {
             required
           ></textarea>
         </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Email-ID:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
         <button type="submit" className="submit-btn">Submit</button>
       </form>
 

@@ -1,0 +1,167 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.navbar-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 5px 0;
+  position: relative;
+}
+
+.navbar-links ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #333;
+  transition: width 0.3s;
+}
+
+.navbar-links ul li a:hover::after {
+  width: 100%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 999;
+  flex-direction: column;
+  display: none;
+  width: 200px; /* Adjust the width as needed */
+}
+
+.dropdown-menu.open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 10px 20px;
+  width: 100%; /* Make the items take full width */
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f4f4f4;
+}
+
+.cta-button-nav {
+  background-color: #1e3a8a; /* Dark Blue Shade */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.cta-button-nav:hover {
+  background-color: #1a2e73; /* Slightly darker shade on hover */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links ul li {
+    margin: 10px 0;
+  }
+
+  .cta-button-nav {
+    margin-top: 10px;
+    width: 42%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

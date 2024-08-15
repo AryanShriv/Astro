@@ -10,7 +10,7 @@ const ServiceCard = ({ imageSrc, title, description }) => {
       <div className="card-content">
         <h3>{title}</h3>
         <p>{description}</p>
-        <a href="#" className="learn-more">Learn More</a> {/* Optional CTA */}
+        <a href="/" className="learn-more">Learn More</a> {/* Optional CTA */}
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import React from 'react'
 import Hero from './Hero/Hero'
 import Services from './Services/Services'
 import Testimonials from './Testimonials/Testimonials'
-import Question from './Question/Question'
 
 const Home = () => {
   return (
@@ -10,7 +9,6 @@ const Home = () => {
         <Hero/>
         <Services/>
         <Testimonials/>
-        <Question/>
     </div>
   )
 }
