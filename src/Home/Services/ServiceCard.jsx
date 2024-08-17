@@ -1,7 +1,7 @@
 import React from 'react';
 import './ServiceCard.css';
 
-const ServiceCard = ({ imageSrc, title, description }) => {
+const ServiceCard = ({ imageSrc, title, description, link }) => {
   return (
     <div className="service-card">
       <div className="card-image">
@@ -10,7 +10,7 @@ const ServiceCard = ({ imageSrc, title, description }) => {
       <div className="card-content">
         <h3>{title}</h3>
         <p>{description}</p>
-        <a href="/" className="learn-more">Learn More</a> {/* Optional CTA */}
+        <a href={link} className="learn-more">Ask Now</a> 
       </div>
     </div>
   );

@@ -36,7 +36,7 @@ const Navbar = () => {
               <li><Link to="/">Prashan (Question)</Link></li>
             </ul>
           </li>
-          <li><Link to="/">About</Link></li>
+          <li><Link to="/Form">About</Link></li>
         </ul>
       </div>
       <Link to="/" className="cta-button-nav">Contact Us</Link>
