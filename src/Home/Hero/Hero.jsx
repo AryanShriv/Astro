@@ -3,6 +3,7 @@ import './Hero.css'
 import { Link } from 'react-router-dom';
 
 import hero from '../../Assets/Hero/Hero.png'
+import Button from '../../Components/Button/Button';
 
 const HeroSection = () => {
   return (
@@ -11,7 +12,7 @@ const HeroSection = () => {
         <h1>Your Astrological Journey Awaits</h1>
         <p>Discover your path with personalized astrological guidance.</p>
         <Link to="/Contact">
-        <button className="cta-button">Contact Us</button>
+        <Button/>
         </Link>
         {/* Mail per chahiye, details saari */}
       </div>

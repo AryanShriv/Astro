@@ -9,6 +9,12 @@
     border-top: 1px solid #ddd;
   }
   
+  .footer-logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
   .footer-column {
     flex: 1;
     min-width: 220px;
