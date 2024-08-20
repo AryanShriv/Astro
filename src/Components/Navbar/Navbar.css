@@ -1,8 +1,9 @@
 /* Navbar.css */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  height: 10vh;
   padding: 20px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -89,20 +90,6 @@
   background-color: #f4f4f4;
 }
 
-.cta-button-nav {
-  background-color: #1e3a8a; /* Dark Blue Shade */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  text-decoration: none;
-}
-
-.cta-button-nav:hover {
-  background-color: #1a2e73; /* Slightly darker shade on hover */
-}
 
 .hamburger {
   display: none;
@@ -142,11 +129,6 @@
 
   .navbar-links ul li {
     margin: 10px 0;
-  }
-
-  .cta-button-nav {
-    margin-top: 10px;
-    width: 42%;
   }
 
   .hamburger {

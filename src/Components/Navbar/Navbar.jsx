@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Button from '../Button/Button';
 import Logo from "../../Assets/Navbar/Logo.jpg"
 
 const Navbar = () => {
@@ -43,9 +42,6 @@ const Navbar = () => {
           <li><Link to="/">About</Link></li>
         </ul>
       </div>
-      <Link to="/Contact">
-      <Button/>
-      </Link>
       <div className="hamburger" onClick={toggleMenu}>
         <div className={`bar ${isOpen ? 'open' : ''}`}></div>
         <div className={`bar ${isOpen ? 'open' : ''}`}></div>

@@ -3,9 +3,10 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 import Logo from "../../Assets/Navbar/Logo.jpg"
 
-import { FiFacebook } from "react-icons/fi";
-import { FiTwitter } from "react-icons/fi";
-import { FiInstagram } from "react-icons/fi";
+// Social Links:
+// import { FiFacebook } from "react-icons/fi";
+// import { FiTwitter } from "react-icons/fi";
+// import { FiInstagram } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -25,19 +26,19 @@ const Footer = () => {
             <Link to="/Form">Job Related</Link>
           </li>
           <li>
-            <Link to="/Form">Jodi Milan (Compatibility look up)</Link>
+            <Link to="/Form">Jodi Milan</Link>
           </li>
           <li>
-            <Link to="/Form">Shaadi (Marriage)</Link>
+            <Link to="/Form">Shaadi</Link>
           </li>
           <li>
-            <Link to="/Form">Muhurata (Auspicious time)</Link>
+            <Link to="/Form">Muhurata</Link>
           </li>
           <li>
             <Link to="/Form">Shubh Ashubh Fal</Link>
           </li>
           <li>
-            <Link to="/Form">Prashan (Question)</Link>
+            <Link to="/Form">Prashan</Link>
           </li>
         </ul>
       </div>
@@ -47,9 +48,15 @@ const Footer = () => {
           <li>
             <a href="mailto:info@example.com">Email Us</a>
           </li>
+          <li>
+            <Link to = "/Form">
+            Contact Us
+            </Link>
+          </li>
         </ul>
       </div>
-      <div className="footer-column">
+      {/* Social Icons */}
+      {/* <div className="footer-column">
         <h4>Follow Us</h4>
         <div className="footer-socials">
           <a
@@ -74,7 +81,7 @@ const Footer = () => {
             <FiInstagram />
           </a>
         </div>
-      </div>
+      </div> */}
       <div className="footer-bottom">
         &copy; 2024 Your Company. All rights reserved.
       </div>

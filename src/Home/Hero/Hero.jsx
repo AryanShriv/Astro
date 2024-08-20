@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h1>Your Astrological Journey Awaits</h1>
+        <h1>Unraveling The Cosmic Dance Of Stars And Planets</h1>
         <p>Discover your path with personalized astrological guidance.</p>
         <Link to="/Contact">
         <Button/>
